@@ -104,7 +104,7 @@ async def revoke(token_address, private_key, chain='ethereum'):
             txn = token_contract.functions.approve(spender, 0).build_transaction({
                 'from': address,
                 'nonce': w3.eth.get_transaction_count(address),
-                'gas': 100000,  # Adjust as needed
+                'gas': 200000,  # Adjust as needed
                 'gasPrice': w3.eth.gas_price
             })
             gas_estimate = w3.eth.estimate_gas(txn)
